@@ -1,7 +1,7 @@
 SpreeMarketplace
 ================
 
-Introduction goes here.
+Another marketplace extension for Spree Commerce. Based on [spree_drop_ship](https://github.com/fiftin/spree_drop_ship) extension. Added abilities to create products and variants by vendor. 
 
 Installation
 ------------
