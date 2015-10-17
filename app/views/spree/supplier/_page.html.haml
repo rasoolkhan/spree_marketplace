@@ -1,7 +1,11 @@
 .supplier-canopy
   .supplier-header
-    = image_tag supplier.background_image
+    = image_tag supplier.background
   .supplier-nav
-    = render :nav, selected_tab
+    %ul
+      %li= link_to Spree.t(:about), supplier_path(supplier.slug)
+      %li= link_to Spree.t(:products), supplier_products_path(supplier.slug)
   .supplier-avatar
     = image_tag supplier.avatar
+  .container.supplier-content
+    = yield

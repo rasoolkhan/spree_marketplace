@@ -1,2 +1,2 @@
-= render 'page'
-.container.supplier-content
+= render layout: 'page', locals: { supplier: @supplier, selected_tab: :about } do
+  About
