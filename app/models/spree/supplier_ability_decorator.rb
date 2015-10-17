@@ -23,11 +23,12 @@ Spree::SupplierAbility.class_eval do
 
         can [:create], Spree::Product
         can [:create], Spree::Variant do |variant|
-
           variant.product.supplier_ids.include?(user.supplier_id)
-
         end
 
+        can [:admin, :update], Spree::Price
+
+        can [:admin], Spree::Variant
         can [:admin, :index], Spree::Product
         can [:admin, :manage, :read, :ready, :ship], Spree::Shipment, order: { state: 'complete' }, stock_location: { supplier_id: user.supplier_id }
         can [:admin, :create, :update], :stock_items

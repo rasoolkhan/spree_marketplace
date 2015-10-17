@@ -1,0 +1,3 @@
+- @suppliers.each do |supplier|
+  .supplier-info
+  = link_to supplier.name, supplier_path(supplier.slug)
