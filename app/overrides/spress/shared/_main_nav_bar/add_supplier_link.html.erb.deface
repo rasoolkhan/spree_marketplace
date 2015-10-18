@@ -1,0 +1,2 @@
+<!-- insert_bottom #home-link -->
+<li id="suppliers-link" data-hook><%= link_to Spree.t(:suppliers), suppliers_path %></li>
