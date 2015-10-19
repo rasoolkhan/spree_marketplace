@@ -1,11 +1,13 @@
 .supplier-canopy
   .supplier-header
     = image_tag supplier.background
+    .supplier-avatar
+      = image_tag supplier.avatar
+      .supplier-name
+        Hetst 
   .supplier-nav
-    %ul
-      %li= link_to Spree.t(:about), supplier_path(supplier.slug)
-      %li= link_to Spree.t(:products), supplier_products_path(supplier.slug)
-  .supplier-avatar
-    = image_tag supplier.avatar
-  .container.supplier-content
-    = yield
+    %ul.nav.nav-pills
+      %li{class:('active' if selected_tab == :about)}= link_to Spree.t(:about), supplier_path(supplier.slug)
+      %li{class:('active' if selected_tab == :products)}= link_to Spree.t(:products), supplier_products_path(supplier.slug)
+.supplier-content
+  = yield

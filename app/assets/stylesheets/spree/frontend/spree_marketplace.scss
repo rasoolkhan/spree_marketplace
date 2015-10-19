@@ -1,0 +1,41 @@
+/*
+Placeholder manifest file.
+the installer will append this file to the app vendored assets here: 'vendor/assets/stylesheets/spree/frontend/all.css'
+*/
+.supplier-canopy {
+  position: relative;
+  margin-top: -20px;
+}
+
+.supplier-header {
+  height: 300px;
+  background: gray;
+}
+
+.supplier-avatar {
+  position: absolute;
+  left: 15px;
+  top: 150px;
+}
+.supplier-name {
+  padding-top: 15px;
+  font-size: 22px;
+  font-weight: bold;
+}
+.supplier-avatar img {
+  width: 200px;
+  background: white;
+  border-radius: 10px;
+  border: 5px solid white;
+}
+
+.supplier-nav {
+  padding-left: 300px;
+  padding-top: 15px;
+  text-align: center;
+}
+
+.supplier-content {
+  padding-top: 15px;
+  padding-left: 300px;
+}

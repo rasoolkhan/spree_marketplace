@@ -1,4 +1,2 @@
-= render layout: 'page', locals: { supplier: @supplier, selected_tab: :product } do
-  - @supplier.products.each do |product|
-    .supplier-product-info
-      = link_to product.name, product_path(product.slug)
+= render layout: 'page', locals: { supplier: @supplier, selected_tab: :products } do
+  = render partial: 'spree/shared/products', locals: { products: @supplier.products }
