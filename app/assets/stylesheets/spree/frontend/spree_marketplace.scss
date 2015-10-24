@@ -8,25 +8,32 @@ the installer will append this file to the app vendored assets here: 'vendor/ass
 }
 
 .supplier-header {
-  height: 300px;
   background: gray;
+}
+
+.supplier-header img {
+  width: 100%;
 }
 
 .supplier-avatar {
   position: absolute;
   left: 15px;
-  top: 150px;
+  bottom: -50px;
 }
+
 .supplier-name {
   padding-top: 15px;
   font-size: 22px;
   font-weight: bold;
+}
+.supplier-avatar {
 }
 .supplier-avatar img {
   width: 200px;
   background: white;
   border-radius: 10px;
   border: 5px solid white;
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.4);
 }
 
 .supplier-nav {
