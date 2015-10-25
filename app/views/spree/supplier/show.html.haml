@@ -1,2 +1,2 @@
 = render layout: 'page', locals: { supplier: @supplier, selected_tab: :about } do
-  About
+  = @supplier.description.html_safe

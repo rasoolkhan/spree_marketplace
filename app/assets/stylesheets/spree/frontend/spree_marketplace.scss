@@ -15,10 +15,13 @@ the installer will append this file to the app vendored assets here: 'vendor/ass
   width: 100%;
 }
 
-.supplier-avatar {
+.supplier-info {
   position: absolute;
   left: 15px;
   bottom: -50px;
+}
+
+.supplier-avatar {
 }
 
 .supplier-name {
@@ -26,8 +29,7 @@ the installer will append this file to the app vendored assets here: 'vendor/ass
   font-size: 22px;
   font-weight: bold;
 }
-.supplier-avatar {
-}
+
 .supplier-avatar img {
   width: 200px;
   background: white;
