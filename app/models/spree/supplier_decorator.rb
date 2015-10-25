@@ -1,14 +1,18 @@
 Spree::Supplier.class_eval do
   has_attached_file :background,
-    styles: { large: '1200x300>' },
+    styles: { large: '1200x300#' },
     default_style: :large,
     url: '/spree/suppliers/background/:id/:style/:basename.:extension',
     path: ':rails_root/public/spree/suppliers/background/:id/:style/:basename.:extension',
     default_url: 'default_supplier_background.jpg'
   has_attached_file :avatar,
-    styles: { small: '50x50', product:'300x300', large: '800x600>' },
+    styles: { small: '50x50#', product:'300x300#', large: '800x600>' },
     default_style: :product,
     url: '/spree/suppliers/avatar/:id/:style/:basename.:extension',
     path: ':rails_root/public/spree/suppliers/avatar/:id/:style/:basename.:extension',
     default_url: 'noimage/product.png'
+
+  validates_attachment :avatar, content_type: { content_type: /\Aimage\/.*\Z/ }
+  validates_attachment :background, content_type: { content_type: /\Aimage\/.*\Z/ }
+
 end
