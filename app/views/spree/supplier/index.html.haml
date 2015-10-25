@@ -4,7 +4,7 @@
       .col-md-3.col-lg-3.suppliers-list-item{'data-hook' => 'suppliers_list_item' }
         .panel.panel-default
           .panel-body.text-center.supplier-body
-            = link_to image_tag(supplier.avatar), supplier_path(supplier.slug)
+            = link_to image_tag(supplier.avatar.url(:product)), supplier_path(supplier.slug), class: 'thumb-image'
           .panel-footer.text-center
             = link_to supplier.name, supplier_path(supplier.slug)
 

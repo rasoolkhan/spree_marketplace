@@ -8,6 +8,10 @@
         = supplier.name
       .supplier-slogan
         = supplier.slogan
+      .supplier-url
+        = supplier.url
+      .supplier-email
+        = supplier.email
   .supplier-nav
     %ul.nav.nav-pills
       %li{class:('active' if selected_tab == :about)}= link_to Spree.t(:about), supplier_path(supplier.slug)
