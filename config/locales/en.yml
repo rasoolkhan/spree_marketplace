@@ -6,3 +6,4 @@ en:
   spree:
     about: "About"
     suppliers: "Suppliers"
+    supplier_has_no_description: "Supplier has no description"

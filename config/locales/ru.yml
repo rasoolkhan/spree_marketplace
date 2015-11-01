@@ -6,3 +6,4 @@ ru:
   spree:
     about: "О магазине"
     suppliers: "Продавцы"
+    supplier_has_no_description: "Нет описания"

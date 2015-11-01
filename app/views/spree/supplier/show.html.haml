@@ -1,2 +1,2 @@
 = render layout: 'page', locals: { supplier: @supplier, selected_tab: :about } do
-  .well= @supplier.description.html_safe
+  .well= @supplier.description.present? ? @supplier.description.html_safe : Spree.t(:supplier_has_no_description)
