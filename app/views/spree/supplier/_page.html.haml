@@ -4,14 +4,14 @@
     .supplier-info
       .supplier-avatar
         = image_tag supplier.avatar
-      .supplier-name
+      .supplier-property.supplier-name
         = supplier.name
-      .supplier-slogan
+      .supplier-property.supplier-slogan
         = supplier.slogan
-      .supplier-url
-        = supplier.url
-      .supplier-email
-        = supplier.email
+      .supplier-property.supplier-url
+        = link_to supplier.url, supplier.url
+      .supplier-property.supplier-email
+        = link_to supplier.email, "mailto: #{supplier.email}"
   .supplier-nav
     %ul.nav.nav-pills
       %li{class:('active' if selected_tab == :about)}= link_to Spree.t(:about), supplier_path(supplier.slug)

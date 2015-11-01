@@ -7,6 +7,10 @@ the installer will append this file to the app vendored assets here: 'vendor/ass
   margin-top: -20px;
 }
 
+.supplier-property {
+  padding: 5px 0;
+}
+
 .supplier-header {
   background: gray;
 }
@@ -19,6 +23,7 @@ the installer will append this file to the app vendored assets here: 'vendor/ass
   position: absolute;
   left: 15px;
   bottom: -105px;
+  height: 300px;
 }
 
 .supplier-avatar {
@@ -49,6 +54,7 @@ the installer will append this file to the app vendored assets here: 'vendor/ass
   padding-left: 300px;
 }
 
-.thumb-image {
+.thumb-image img {
   width: 100%;
+  max-width: 240px;
 }
