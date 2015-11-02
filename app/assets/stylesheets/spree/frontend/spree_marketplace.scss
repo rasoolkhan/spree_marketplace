@@ -58,3 +58,13 @@ the installer will append this file to the app vendored assets here: 'vendor/ass
   width: 100%;
   max-width: 240px;
 }
+
+.product-supplier-avatar img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.product-supplier-name {
+  padding-top: 15px;
+  text-align: center;
+}
