@@ -1,15 +1,145 @@
-# Sample localization file for English. Add more files in this directory for other locales.
-# See https://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
-
 ru:
-  hello: "Здравствуй Мир"
+  activerecord:
+    attributes:
+      spree/supplier:
+        commission_flat_rate: Фиксированная комиссия
+        commission_percentage: Коммисионный процент
+        name: Имя
+        tax_id: TAX ID
+        url: URL
+        address1: Адрес
+        address2: Адрес (продолжение)
+        city: Город
+        commission: Комиссия
+        country: Страна
+        email: Email
+        state: Состояние
+        active: Активный
+        url: URL
+        zipcode: Индекс
+        supplier_info: Информация о поставщике
+        supplier_signup: Регистрация поставщика
+        suppliers: Поставщики
+      spree/shipment:
+        created_at: Создан
+        number: Номер
+        state: Статус
+        item_cost: Стоимость единицы
+        cost: Стоимость
+        total_tax: Total impuesto
+        final_price: Конечная цена
+        supplier_commission: Комиссия поставщика
+    errors:
+      models:
+        spree/supplier:
+          attributes:
+            url:
+              invalid: es inválido. Por favor asegúrece que 'http://' esté incluido
+              not_responding: 'es inválido, no responde o ha redireccionado a otra url'
+  drop_ship_order_number: "Drop Ship заказ #%{number}"
+  signup: Регистрация
+  signup_to_become_a_supplier: 'Вы должны зарегистрироваться чтобы стать поставщиком'
   spree:
-    about: "О магазине"
-    suppliers: "Продавцы"
-    supplier_has_no_description: "Нет описания"
-    profile: "Профиль"
-    description: "Описание"
-    avatar: "Аватар"
-    background: "Фон"
-    slogan: "Слоган"
-    supplier_name: "Название"
+    order_already_updated: Заказ был изменен ранее.
+    drop_ship_orders: Заказы Drop Ship
+    drop_ship_settings: Настройки Drop Ship
+    must_be_logged_in: 'Вы должны быть аутентифицированы'
+    about: О магазине
+    supplier_has_no_description: Нет описания
+    avatar: Аватар
+    background: Фон
+    slogan: Слоган
+    description: Описание
+    admin:
+      tab:
+        profile: Профиль
+      drop_ship_settings:
+        update:
+          success: Настройки Drop ship успешно сохранены
+      orders:
+        drop_ship_order_order_header:
+          drop_ship_order_ids: DSO IDs
+        edit:
+          approve_drop_ship_orders: Ordenes aprobadas por el proveedor
+          resend_drop_ship_orders: Reenviar ordenes al proveedor
+          drop_ship_order_approval_confirmation: Se le enviará una notificación por correo electrónico a cada proveedor. ¿Desea continuar?
+        show:
+          approve_drop_ship_orders: Ordene aprobadas por el proveedor
+          resend_drop_ship_orders: Reenviar ordenes al proveedor
+          drop_ship_order_approval_confirmation: Se le enviará una notificación por correo electrónico a cada proveedor. ¿Desea continuar?
+      suppliers:
+        edit:
+          back_to_suppliers: Вернуться к списку поставщиков
+        new:
+          new_supplier: Новый поставщик
+        form:
+          supplier_details: Информация о поставщике
+          supplier_address: Адрес поставщика
+      drop_ship_orders:
+        deliver:
+          error: "La orden %{number} no pudo ser enviada al proveedor."
+          success: "La orden %{number} fue enviada al proveedor."
+        orders_sent: Todas las ordenes fueron enviadas a los proveedores
+        orders_not_sent: Algunas o todas las ordenes no pudieron ser enviadas. Por favor contacte directamente al proveedor.
+    back_to_orders_list: Вернуться к списоку заказов
+    back_to_suppliers: Вернуться к списку поставщиков
+    business: Сделка
+    cancel: Отмена
+    company_info: Информация о компании
+    confirm_order: Подтвердить заказ
+    contact_address: Контактный адрес
+    drop_ship: Drop Ship
+    editing_supplier: Редактирование данных поставщика
+    default_commission_flat_rate: Comision por defecto
+    default_commission_percentage: Porcentaje de comision por defecto
+    automatically_deliver_orders_to_supplier: Enviar orden automaticamente a los proveedores
+    send_supplier_email: Написать письмо поставщику
+    individual: Individual
+    listing_suppliers: Список поставщиков
+    manage: Управлять
+    name: Имя
+    or: или
+    new_supplier: Новый поставщик
+    suppliers: Поставщики
+    listing_shipments: 'Список поставок'
+    order_state:
+      active: Активный
+      completed: Завершен
+      confirmed: Подтвержден
+      delivered: Доставлен
+    resend_order_to_supplier: Отправить заказ поставщику повторно.
+    save: Сохранить
+    search: Поиск
+    send_order_to_supplier: Отправить заказ поставщику.
+    show_only_incomplete_orders: Показать только незавершенные заказы
+    supplier: Поставщик
+    supplier_information: Информация о поставщике
+    supplier_details: Информация о поставщике
+    supplier_info: Информация о поставщике
+    drop_ship_order_mailer:
+      supplier_order:
+        hello: "Здравствуйте %{name},"
+        subject: "%{name} Orden al proveedor #%{number}"
+        thank_you_again: "Gracias nuevamente por su negocio, <b>%{name}</b>"
+    shared:
+      unauthorized:
+        explained: Usted no está autorizado a acceder a esta página.
+        unauthorized: Вы не авторизированы
+    supplier_mailer:
+      welcome:
+        hello: "Здравствуйте %{name},"
+        check_your_status: Puede revisar el estado de su pedido por
+        logging_into_your_account: Autentíquese.
+        once_your_request_is_approved: Una vez que su pedido sea aprobado podrá gestionar su inventario.
+        subject: 'Gracias por autenticarse. Por favor verifique la información.'
+        thank_you_again: "Gracias nuevamente por su negocio, <b>%{name}</b>"
+        thank_you_for_signing_up: Gracias por autenticarse para ser un proveedor.
+    # suppliers:
+    #   already_signed_up: "Вы уже зарегистрированы2."
+    #   create:
+    #     success: Спасибо за регистрацию!
+    supplier_registration:
+      already_signed_up: "Вы уже зарегистрированы1."
+      create:
+        invalid_password: Неверный пароль. Пожалуйста войдите или зарегистрируйтесь.
+        success: Спасибо за регистрацию!

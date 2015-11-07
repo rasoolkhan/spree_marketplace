@@ -26,6 +26,11 @@ Spree::SupplierAbility.class_eval do
           variant.product.supplier_ids.include?(user.supplier_id)
         end
 
+
+        can [:admin, :show], Spree::Prototype
+        can [:admin, :update], Spree::ProductProperty
+
+
         can [:admin, :update], Spree::Price
 
         can [:admin], Spree::Variant

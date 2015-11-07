@@ -3,19 +3,21 @@ Deface::Override.new(virtual_path: 'spree/admin/suppliers/_form',
   insert_before: 'erb:contains("spree_current_user.admin?")',
   text:
     "<%= form.field_container :slogan, class: ['form-group'] do %>
-      <%= form.label :slogan, Spree::Supplier.human_attribute_name(:slogan) %>:<br />
+      <%= form.label :slogan, Spree.t(:slogan) %>:<br />
       <%= form.text_field :slogan, :class => 'form-control' %>
     <% end %>"
 )
 
 Deface::Override.new(virtual_path: 'spree/admin/suppliers/_form',
   name: 'add_description_to_admin_panel',
-  insert_before: 'erb:contains("spree_current_user.admin?")',
+  insert_after: 'div[data-hook="supplier_details_wrapper"]',
   text:
-    "<%= form.field_container :description, class: ['form-group'] do %>
-      <%= form.label :description, Spree::Supplier.human_attribute_name(:description) %>:<br />
-      <%= form.text_area :description, :class => 'form-control' %>
-    <% end %>"
+    "<div class=\"col-md-12\">
+      <%= form.field_container :description, class: ['form-group'] do %>
+        <%= form.label :description, Spree.t(:description) %>:<br />
+        <%= form.text_area :description, :class => 'form-control', rows: 8 %>
+      <% end %>
+    </div>"
 )
 
 Deface::Override.new(virtual_path: 'spree/admin/suppliers/_form',
