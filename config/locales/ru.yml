@@ -40,6 +40,7 @@ ru:
   signup: Регистрация
   signup_to_become_a_supplier: 'Вы должны зарегистрироваться чтобы стать поставщиком'
   spree:
+    promotionable: Продвигаемый
     order_already_updated: Заказ был изменен ранее.
     drop_ship_orders: Заказы Drop Ship
     drop_ship_settings: Настройки Drop Ship
